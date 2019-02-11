@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { NavLink } from 'react-router-dom'
 
-class MovieList extends Component {
+import PhotoDetails from './PhotoDetails';
+
+class PhotoList extends Component {
   state = {
     photos:[]
   }
@@ -28,10 +31,11 @@ class MovieList extends Component {
                     <span className="card-title">{photo.title}</span>
                   </div>
                   <div className="card-action">
-                    <a href="#">This is a link</a>
+                    <NavLink to={`/${photo.id}`}>This is a link</NavLink>
                   </div>
                 </div>
-              </div>                      )
+              </div>                      
+          )
         })}
         </div>
       </section>
@@ -39,4 +43,4 @@ class MovieList extends Component {
   }
 }
 
-export default MovieList;
+export default PhotoList;
