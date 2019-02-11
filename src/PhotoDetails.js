@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 
 class PhotoDetails extends Component{
   state = {
@@ -23,6 +24,9 @@ class PhotoDetails extends Component{
     
     return(
      <div className="row"> 
+      <div>
+        <NavLink to="/"> Back </NavLink>
+      </div>
       <div key={photoDetails.id} className="col s6 m6 l3">
         <div className="card">
           <div className="card-image">
